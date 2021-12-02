@@ -4,7 +4,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { initializeApp } from "firebase/app";
-import firebase from 'firebase'
+import { getAuth } from "firebase/auth";
+import { getStorage } from "firebase/storage";
+import * as firebase from 'firebase/app';
 import 'firebase/firestore'
 import 'firebase/auth'
 
@@ -18,10 +20,10 @@ initializeApp({
   appId: "1:301686107390:web:285693b158fab0e86349af",
   measurementId: "G-1TTD1QQ22M"
 });
-const Context = createContext(null)
+export const Context = createContext(null)
 
-const auth = firebase.auth()
-const firestore = firebase.firestore()
+const auth = getAuth()
+const firestore = getStorage()
 
 ReactDOM.render(
   <React.StrictMode>
