@@ -5,8 +5,8 @@ import AppRouter from "./components/AppRouter";
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
-      <AppRouter />
+        <Navbar/>
+        <AppRouter/>
     </BrowserRouter>
   );
 }
