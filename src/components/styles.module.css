@@ -1,0 +1,27 @@
+.navbarWrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.navbarLink {
+    display: block;
+    text-decoration: none;
+}
+
+.navbarButton {
+    color: white !important;
+    border: 1px solid white !important;
+}
+
+.loginWrapper {
+    height: calc(100vh - 50px);
+    align-items: center;
+    justify-content: center;
+}
+.loginForm {
+    width: 400px!important;
+    background-color: lightgray;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
