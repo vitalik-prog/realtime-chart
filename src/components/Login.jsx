@@ -13,7 +13,6 @@ const Login = () => {
   const handleLogin = async () => {
     const provider = new GoogleAuthProvider();
     const { user } = await signInWithPopup(auth, provider)
-    console.log(user)
   }
 
   return (

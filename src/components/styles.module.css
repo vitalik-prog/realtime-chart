@@ -12,11 +12,34 @@
     color: white !important;
     border: 1px solid white !important;
 }
-
+.messages {
+    width: 80%;
+    height: 70vh;
+    border: 1px solid gray;
+    overflow-y: auto;
+}
+.inputArea {
+    flex-direction: column!important;
+    align-items: flex-end!important;
+    width: 80%!important;
+}
+.owner {
+    border: 2px solid green!important;
+    margin: 10px 10px 10px auto;
+    width: fit-content;
+    padding: 5px;
+}
+.notOwner {
+    border: 2px dashed red!important;
+    margin: 10px 10px 10px 0;
+    width: fit-content;
+    padding: 5px;
+}
 .loginWrapper {
     height: calc(100vh - 50px);
     align-items: center;
     justify-content: center;
+    padding: 5px;
 }
 .loginForm {
     width: 400px!important;
