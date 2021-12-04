@@ -8,7 +8,7 @@ import Loader from "./components/Loader";
 
 function App() {
   const { auth } = useContext(Context)
-  const [ user, loading,  ] = useAuthState(auth)
+  const [ user, loading  ] = useAuthState(auth)
 
   if (loading) {
     return <Loader />

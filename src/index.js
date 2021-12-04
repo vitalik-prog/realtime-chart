@@ -3,34 +3,24 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
-import { getStorage } from "firebase/storage";
-import * as firebase from 'firebase/app';
 import 'firebase/firestore'
 import 'firebase/auth'
+import getFirebase from "./firebase/getFirebase";
+import {getFirestore} from "firebase/firestore";
 
-// Initialize Firebase
-initializeApp({
-  apiKey: "AIzaSyDX4NSHEEZEFot0XG2oSln9hccrz8Q9U9k",
-  authDomain: "realtime-chart-ulbi.firebaseapp.com",
-  projectId: "realtime-chart-ulbi",
-  storageBucket: "realtime-chart-ulbi.appspot.com",
-  messagingSenderId: "301686107390",
-  appId: "1:301686107390:web:285693b158fab0e86349af",
-  measurementId: "G-1TTD1QQ22M"
-});
 export const Context = createContext(null)
 
+getFirebase()
 const auth = getAuth()
-const firestore = getStorage()
+const app = getFirebase()
+const db = getFirestore(app);
 
 ReactDOM.render(
   <React.StrictMode>
     <Context.Provider value={{
       auth,
-      firebase,
-      firestore
+      db,
     }}>
       <App />
     </Context.Provider>
